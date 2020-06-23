@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="res_config_settings_form_cdn" model="ir.ui.view">
+            <field name="name">CDN Url Endpoint</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='cdn_url']" position="after">
+                    <label class="col-lg-3 o_light_label" for="cdn_endpoint"/>
+                    <field name="cdn_endpoint" placeholder="/cdn_endpoint/" t-translation="off"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
